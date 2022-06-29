@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable countdown</title>
+    <script type="module" src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Customizable Countdown</h1>
+        <div class="options" id="options">
+            <div class="floating-content">
+                <input class="floating-input" type="number" id="year-input" name="year" placeholder=" " enabled>
+                <label class="floating-label" id="year-label">Year</label>
+                <span class="floating-error" id="year-error"></span>
+            </div>
+            <div class="floating-content">
+                <select class="floating-select" id="month-input" name="month" onclick="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);" value="" disabled>
+                    <option value=""></option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <label class="floating-label" id="month-label">Input year first</label>
+                <span class="floating-error" id="month-error"></span>
+            </div>
+            <div class="floating-content">
+                <select class="floating-select" id="day-input" name="day" onclick="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);" value="" disabled><option value=""></option></select>
+                <label class="floating-label" id="day-label">Select month first</label>
+                <span class="floating-error" id="day-error"></span>
+            </div>
+            <div class="floating-content">
+                <select class="floating-select" id="hour-input" name="hour" onclick="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);" value="" disabled><option value=""></option></select>
+                <label class="floating-label" id="hour-label">Select day first</label>
+                <span class="floating-error" id="hour-error"></span>
+            </div>
+            <div class="floating-content">
+                <select class="floating-select" id="minute-input" name="minute" onclick="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);" value="" disabled><option value=""></option></select>
+                <label class="floating-label" id="minute-label">Select hour first</label>
+                <span class="floating-error" id="minute-error"></span>
+            </div>
+            <div class="floating-content">
+                <select class="floating-select" id="second-input" name="second" onclick="this.setAttribute('value', this.value);" onchange="this.setAttribute('value', this.value);" value="" disabled><option value=""></option></select>
+                <label class="floating-label" id="second-label">Select minute first</label>
+                <span class="floating-error" id="second-error"></span>
+            </div>
+            
+            <button id="start-button" disabled>Start</button>
+        </div>
+
+        <h2>Time left</h2>
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-item-value" id="years">0</div>
+                <div class="countdown-item-label">Years</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-item-value" id="months">0</div>
+                <div class="countdown-item-label">Months</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-item-value" id="weeks">0</div>
+                <div class="countdown-item-label">Weeks</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-item-value" id="days">0</div>
+                <div class="countdown-item-label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-item-value" id="hours">0</div>
+                <div class="countdown-item-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-item-value" id="minutes">0</div>
+                <div class="countdown-item-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-item-value" id="seconds">0</div>
+                <div class="countdown-item-label">Seconds</div>
+            </div>
+            <div id="date"></div>
+        </div>
+    </div>
+</body>
+
+</html>
